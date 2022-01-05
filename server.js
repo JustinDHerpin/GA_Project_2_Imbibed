@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4080
+const PORT = 4080
 const expressEjsLayout = require('express-ejs-layouts')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
@@ -11,7 +11,7 @@ const mongoURI = 'mongodb://localhost:27017/imbibed'
 const Wine = require('./models/wineSchema')
 const wineSeed = require('./models/wineSeed.js')
 
-app.use(express.static('./public'))
+// app.use(express.static('./public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
 
-app.use('/wines', wineController)
+
 
 
 mongoose.connect(mongoURI, {
@@ -34,11 +34,17 @@ mongoose.connect(mongoURI, {
     db.on('connected', () => console.log('mongo connected: ', mongoURI))
     db.on('disconnected', () => console.log('mongo disconnected'))
 
+
+    app.use('/wines', wineController)
+
 // HOME Route:
 
 app.get('/', (req, res) => {
     res.render('index')
 })
+
+
+// ------- Code to clear and re-populate  wine db ---------------------
 
 // Wine.collection.drop()
 
@@ -51,7 +57,8 @@ app.get('/', (req, res) => {
 //     }
 // })
 
-    
-app.listen(port, () => {
-    console.log(`Drink Up! on port: ${port}`)
+// --------------------------------------------------------------------
+
+app.listen(PORT, () => {
+    console.log(`Drink Up! on PORT: ${PORT}`)
 })
