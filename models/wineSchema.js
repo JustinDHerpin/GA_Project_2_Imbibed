@@ -8,7 +8,7 @@ const wineSchema = new mongoose.Schema({
     vintage: String,
     type: String,
     varietal: String,
-    pricePayed: Number,
+    pricePayed: { type: Number, min:0 },
     rating: { type: Number, min:0, max: 100 },
     liked: Boolean,
     tastingNotes: String,

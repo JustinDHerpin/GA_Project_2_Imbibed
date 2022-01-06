@@ -1,1 +1,54 @@
 <h1>New route working</h1>
+
+<div class="container">
+
+    <h1>Add a New Wine</h1>
+
+    <form action="/wines">
+        <input type="submit" value="Return to Wine List Home">
+    </form>
+
+    <form action="/wines" method='POST'>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name">
+
+        <label for="vineyard">Vineyard</label>
+        <input type="text" name="vineyard" id="vineyard" placeholder="Vineyard">
+
+        <label for="countryState">State/Country of Origin</label>
+        <input type="text" name="countryState" id="countryState" placeholder="ex: California, Italy, Washington, etc.">
+
+        <label for="region">Region</label> 
+        <input type="text" name="region" id="region" placeholder="ex: Napa Valley, Sonoma County, etc.">
+
+        <label for="vintage">Vintage/Year</label>
+        <input type="text" name="vintage" id="vintage" placeholder="ex: 1998, 2012, etc.">
+
+        <label for="type">Type</label>
+        <input type="text" name="type" id="type" placeholder="ex: Red, White, Sparkling, etc.">
+
+        <label for="varietal">Varietal</label>
+        <input type="text" name="varietal" id="varietal" placeholder="ex: Chardonnay, Merlot, etc.">
+
+        <label for="pricePaid">Price</label>
+        <input type="number" name="pricePaid" id="pricePaid" placeholder="ex: 75, 15, etc.">
+
+        <label for="rating">Rating</label>
+        <input type="number" name="rating" id="rating" placeholder="Your Rating ex: 85">
+
+        <label for="liked">Liked</label>
+        <input type="checkbox" name="liked" id="liked">
+
+        <label for="tastingNotes">Tasting Notes</label>
+        <input type="text" name="tastingNotes" id="tastingNotes" placeholder="ex: Bitter, Gramma loved it, etc.">
+
+        <label for="wineImg">Image Link</label>
+        <input type="text" name="wineImg" id="wineImg" placeholder="ex: https://www.totalwine.com/dynamic/...">
+
+        <input type="submit" value="Add This Wine">
+        
+    </form>
+
+
+</div>

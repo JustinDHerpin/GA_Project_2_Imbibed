@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const db = mongoose.connection
 const wineController = require('./controllers/wineController')
 
-const mongoURI = 'mongodb://localhost:27017/imbibed'
+const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
 const Wine = require('./models/wineSchema')
 const wineSeed = require('./models/wineSeed.js')
 
@@ -25,17 +25,20 @@ app.set('view engine', 'ejs')
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    },
+    }).then(
     () => {
         console.log('The connection with mongod is established')
+    }).catch((error) => {
+        console.log(error)
     })
+
+
 
     db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
     db.on('connected', () => console.log('mongo connected: ', mongoURI))
     db.on('disconnected', () => console.log('mongo disconnected'))
 
-
-    app.use('/wines', wineController)
+app.use('/wines', wineController)
 
 // HOME Route:
 

@@ -1,3 +1,56 @@
 <h1>Edit Route is Working</h1>
 
 <h3> <%= item.name %></h3>
+
+<div class="container">
+
+    <h1>Wine Editor</h1>
+
+    <form action="/wines">
+        <input type="submit" value="Return to Wine List Home">
+    </form>
+
+    <form action="/wines/<%= item.id %>?_method=PUT" method='POST'>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= item.name %>">
+
+        <label for="vineyard">Vineyard</label>
+        <input type="text" name="vineyard" id="vineyard" value="<%= item.vineyard %>">
+
+        <label for="countryState">State/Country of Origin</label>
+        <input type="text" name="countryState" id="countryState" value="<%= item.countryState %>">
+
+        <label for="region">Region</label> 
+        <input type="text" name="region" id="region" value="<%= item.region %>">
+
+        <label for="vintage">Vintage/Year</label>
+        <input type="text" name="vintage" id="vintage" value="<%= item.vintage %>">
+
+        <label for="type">Type</label>
+        <input type="text" name="type" id="type" value="<%= item.type %>">
+
+        <label for="varietal">Varietal</label>
+        <input type="text" name="varietal" id="varietal" value="<%= item.varietal %>">
+
+        <label for="pricePaid">Price</label>
+        <input type="number" name="pricePaid" id="pricePaid" value="<%= item.pricePaid %>">
+
+        <label for="rating">Rating</label>
+        <input type="number" name="rating" id="rating" value="<%= item.rating %>">
+
+        <label for="liked">Liked</label>
+        <input type="checkbox" name="liked" id="liked" <% if(item.liked===true){%> checked <% } %>>
+
+        <label for="tastingNotes">Tasting Notes</label>
+        <input type="text" name="tastingNotes" id="tastingNotes" value="<%= item.tastingNotes %>">
+
+        <label for="wineImg">Image Link</label>
+        <input type="text" name="wineImg" id="wineImg" value="<%= item.wineImg %>">
+
+        <input type="submit" value="Save Changes">
+        
+    </form>
+
+
+</div>

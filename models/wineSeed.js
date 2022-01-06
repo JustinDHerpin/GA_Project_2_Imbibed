@@ -1,7 +1,10 @@
 module.exports =
 [
 {
-    name: "caymus merlot",
+    name: "Caymus Merlot",
    
+},
+{
+    name: "Silver Oak Cabernet"
 }
 ]
