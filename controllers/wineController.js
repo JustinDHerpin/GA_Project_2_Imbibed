@@ -41,6 +41,12 @@ router.get('/:id/edit', (req, res) => {
 // PUT/PATCH Route for Edit/Update:
 
 router.put('/:id', (req, res) => {
+    if(req.body.liked === 'on'){
+        req.body.liked = true
+    }else{
+        req.body.liked = false
+    }
+
     Wine.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem) => {
         res.redirect('/wines/' + req.params.id)
         // console.log(err)
@@ -59,6 +65,14 @@ router.post('/', (req, res) => {
             res.redirect('/wines')
         }
         
+    })
+})
+
+// DELETE Route:
+
+router.delete('/:id', (req, res) => {
+    Wine.findByIdAndDelete(req.params.id, (err, deletedWine) => {
+        res.redirect('/wines')
     })
 })
 

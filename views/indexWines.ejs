@@ -2,5 +2,9 @@
 
 
 <% items.forEach( (item) => { %>
-    <p> <%= item.name %> </p>
+    <h3> 
+        
+        <a href="/wines/<%= item.id %>"><%= item.name %></a> 
+    
+    </h3>
 <% }) %>

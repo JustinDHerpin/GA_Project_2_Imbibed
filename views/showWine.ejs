@@ -11,5 +11,8 @@
 <h3> My Rating: <%= item.rating %> </h3>
 <h3> Liked: <%= item.liked %> </h3>
 <h3> Tasting Notes: <%= item.tastingNotes %> </h3>
-<img>  </h3>
-<img src="<%= item.wineImg %>" alt="<%= item.name %>">
+<img src="<%= item.wineImg %>" alt="<%= item.name %>" width="400" height="400">
+
+<form action="/wines/<%= item.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete This Wine">
+</form>
