@@ -1,0 +1,50 @@
+
+#body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    min-height: 100%;
+    /* min-width: 1024; */
+    justify-content: center;
+    margin: 0 auto;
+    background-image: url("CEA31AA0-7302-45FA-8F25-2C939B353241_1_105_c.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+header {
+    height:fit-content;
+    text-align: center;
+    color: red;
+    background-image: url("https://image.shutterstock.com/image-photo/still-life-wine-glasses-barrels-600w-1572204511.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.db-buttons-div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.aTagButton {
+    font: bold 30px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    justify-content: center;
+    border-radius: 20px;
+    flex: 1 1 0px;
+}
+
+#image {
+    /* background-image: url(CEA31AA0-7302-45FA-8F25-2C939B353241_1_105_c.jpeg); */
+}

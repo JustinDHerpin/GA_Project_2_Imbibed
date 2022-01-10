@@ -11,7 +11,7 @@ const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
 const Wine = require('./models/wineSchema')
 const wineSeed = require('./models/wineSeed.js')
 
-// app.use(express.static('./public'))
+app.use(express.static('./public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
