@@ -1,10 +1,44 @@
-<h1>Hey....your route to "indexWines" is working</h1>
+<div class="indexWines">
 
+    <h1>My Wine List:</h1>
 
-<% items.forEach( (item) => { %>
-    <h3> 
-        
-        <a href="/wines/<%= item.id %>"><%= item.name %></a> 
-    
-    </h3>
-<% }) %>
+    <form action="/wines/new">
+        <input type="submit" value="Creat a New Wine">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Varietal</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Liked</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% items.forEach( (item) => { %>
+               
+                <tr>
+
+                    <td><a href="/wines/<%= item.id %>"> <%= item.name %> </a></td>
+                    <td> <%= item.varietal %> </td>
+                    <td> <%= item.type %> </td>
+                    <td>$ <%= item.pricePayed %> </td>
+                    
+                    <% if(item.liked === true) { %>
+                        <td> Liked: Yes </td>
+                    <% } else { %>
+                        <td>Liked: No</td>
+                    <% } %>
+                    
+
+                </tr>
+               
+            <% }) %>  
+
+        </tbody>
+    </table>
+
+</div>

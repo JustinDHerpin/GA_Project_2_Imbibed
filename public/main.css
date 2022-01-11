@@ -6,18 +6,27 @@
     box-sizing: border-box;
 }
 
+/* html, main, body { */
+html, body {
+    height: 100%;
+}
+
 body {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: #2660b1;
     
 }
 
 main {
+    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* padding-bottom: 2.5rem; */
 }
+
+/* --------------------  Nav Bar Styling  ---------------------- */
 
 nav {
     display: flex;
@@ -49,6 +58,20 @@ nav ul li a {
     font-size: 17px;
     text-transform: uppercase;
 }
+
+/* ------------ Footer Styling  -----------------------------*/
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    flex-shrink: 0;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 2.5rem;
+    background: #2660b1; 
+}
+
+/* ------------ Index/Home Page Styling  --------------------*/
 
 .index_div {
     background: whitesmoke;
@@ -86,7 +109,59 @@ nav ul li a {
     text-align: center;
 }
 
-/*  --------- Wine Edit Form Styling -----------*/
+/* -----------------  Wine Index/List Style -------------- */
+
+.indexWines {
+    background-color: white;
+    margin: 75px auto 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    margin: 30px auto 0 auto;
+    table-layout: fixed;
+    width: 98%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+thead th:nth-child(1) {
+    width: 25%;
+}
+
+thead th:nth-child(2) {
+    width: 25%;
+}
+
+thead th:nth-child(3) {
+    width: 25%;
+}
+
+thead th:nth-child(4) {
+    width: 12.5%;
+}
+
+thead th:nth-child(5) {
+    width: 12.5%;
+}
+
+th {
+
+    background-color: cornflowerblue;
+}
+
+th, td {
+    padding: 20px;
+}
+
+td {
+    border: 2px solid blue;
+}
+
+/*  ----------------- Wine Edit Form Styling ----------- */
 
 fieldset {
     margin: 2em 0;
