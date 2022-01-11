@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embibed</title>
+    <title>Imbibed</title>
     <link rel="stylesheet" href="/main.css">
 </head>
     
-    <body id="body">
+<body>
+    
+    
+    <nav>
+
+        <label class="logo" >imbibed</label>
+
+        <ul>
+
+            <li class="nav"><a href='/' class="aTagButton">Homepage</a></li>
+            <li class="nav"><a href='/wines' class="aTagButton">Wine Home</a></li>
+            <li class="nav"><a href='#' class="aTagButton">Future</a></li>
+            <li class="nav"><a href='#' class="aTagButton">Future</a></li>
+
+        </ul>
+
+    </nav>
+    
+
+    <main>
         
-        <header>
-            <H1>Welcome to Imbibed!</H1>
-            <ul id="navBar">
+        <%- body %> 
 
-                <li id="navHome" class="nav" onclick="location.href='/';">Homepage</li>
-                <li id="navWine" class="nav"><a href='/wines' class="aTagButton">Wine Home</a></li>
-                <li class="nav">Homepage</li>
-                <li class="nav">Homepage</li>
+    </main>
 
-            </ul>
-        </header>
+    <footer class="footer">copyright jherpin2022</footer>
 
-        <main>
-            
-            <div id="body-div">
-            
-
-                <%- body %> 
-
-            </div>
-
-        </main>
-
-        <footer>copyright jherpin2022</footer>
-
-    </body>
+</body>
 
 </html>

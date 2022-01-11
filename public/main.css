@@ -1,50 +1,133 @@
-
-#body {
-    display: flex;
-    flex-direction: column;
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 body {
-    min-height: 100%;
-    /* min-width: 1024; */
-    justify-content: center;
-    margin: 0 auto;
-    background-image: url("CEA31AA0-7302-45FA-8F25-2C939B353241_1_105_c.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background: #2660b1;
     
 }
 
-header {
-    height:fit-content;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background: #2660b1;
+    height: 80px;
+}
+
+label.logo {
+    color: white;
+    font-size:40px;
+    /* line-height: 80 px; */
+    padding: 0 90px 0 110px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    /* line-height: 80px; */
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.index_div {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome_div {
+    margin: auto;
+    width: 75%;
     text-align: center;
-    color: red;
-    background-image: url("https://image.shutterstock.com/image-photo/still-life-wine-glasses-barrels-600w-1572204511.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    align-content: center;
+}
+
+.welcome_div h1 {
+    margin-top: 50px;
+}
+
+.welcome_div h2 {
+    margin-top: 25px;
 }
 
 .db-buttons-div {
+    margin: 100px 0 100px 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    /* background-image: url('https://cdn.pixabay.com/photo/2020/02/02/15/07/wine-4813260_1280.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; */
 }
 
-.aTagButton {
-    font: bold 30px Arial;
-    text-decoration: none;
-    background-color: maroon;
-    color: #333333;
-    padding: 8px 30px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-    justify-content: center;
-    border-radius: 20px;
-    flex: 0 1 0px;
+.disclaimer {
+    text-align: center;
 }
 
-#image {
-    /* background-image: url(CEA31AA0-7302-45FA-8F25-2C939B353241_1_105_c.jpeg); */
+/*  --------- Wine Edit Form Styling -----------*/
+
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    width: 25em;
+    min-width: 1200px;
+    font-style: italic;
+}
+
+Legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+    color: #999;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+/* .checks label {
+    margin-top: 0;
+} */
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+
+input {
+    padding: .5em;
+    border: solid 1px #999;
+    width: 100%;
+}
+
+input:last-of-type {
+    margin-top: 2em;
+}
+
+.wine_submit_btn {
+    width: 500px;
 }
