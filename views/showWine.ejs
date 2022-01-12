@@ -1,23 +1,39 @@
-<h1>Hey...good job your "showWine" route is working</h1>
+<div class="wine_show_name">
+    <h1> <%= item.name %> </h1>
+</div>
 
-<h2> Name: <%= item.name %> </h2>
-<h3> Vineyard: <%= item.vineyard %> </h3>
-<h3> Local: <%= item.countryState %> </h3>
-<h3> Region: <%= item.region %> </h3>
-<h3> Vintage: <%= item.vintage %> </h3>
-<h3> Type: <%= item.type %> </h3>
-<h3> Varietal: <%= item.varietal %> </h3>
-<h3> Price: <%= item.pricePaid %> </h3>
-<h3> My Rating: <%= item.rating %> </h3>
-<h3> Liked: <%= item.liked %> </h3>
-<h3> Tasting Notes: <%= item.tastingNotes %> </h3>
-<img src="<%= item.wineImg %>" alt="<%= item.name %>" width="400" height="400">
+<div class="wine_show_container">
+    <div class="wine_show_main">
+        <div class="wine_show_img">
+            <img src="<%= item.wineImg %>" alt="<%= item.name %>" width="400" height="400">
+        </div>
 
+        <div class="wine_show_rest">
+            <h4> Name: <%= item.name %> </h2>
+            <h4> Vineyard: <%= item.vineyard %> </h4>
+            <h4> Local: <%= item.countryState %> </h4>
+            <h4> Region: <%= item.region %> </h4>
+            <h4> Vintage: <%= item.vintage %> </h4>
+            <h4> Type: <%= item.type %> </h4>
+            <h4> Varietal: <%= item.varietal %> </h4>
+            <h4> Price: <%= item.pricePaid %> </h4>
+            <h4> My Rating: <%= item.rating %> </h4>
+            <h4> Liked: <%= item.liked %> </h4>
+            <h4> Tasting Notes: <%= item.tastingNotes %> </h4>
+        </div>
 
-<form action="/wines/<%= item.id %>/edit">
-    <input type="submit" value="Edit This Wine">
-</form>
+    </div>
 
-<form action="/wines/<%= item.id %>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete This Wine">
-</form>
+    <div class="wine_show_btns">
+
+        <form action="/wines/<%= item.id %>/edit">
+            <input type="submit" value="Edit This Wine">
+        </form>
+
+        <form action="/wines/<%= item.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete This Wine">
+        </form>
+
+    </div>
+
+</div>

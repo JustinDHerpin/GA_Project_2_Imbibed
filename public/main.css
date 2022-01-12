@@ -163,6 +163,36 @@ td {
     border: 2px solid blue;
 }
 
+/*  ----------------- Wine showWine Page Styling ----------- */
+
+.wine_show_name {
+    /* display: flex; */
+    width: 100%;
+} h1 {
+    margin: 2.5rem 0 0 2rem;
+}
+
+.wine_show_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.wine_show_main {  
+    margin: 4rem 0 0 0;
+    display: flex;
+}
+
+.wine_show_btns {
+    display: flex;
+
+}
+
+.wine_show_rest h4 {
+    margin-top: .25rem;
+}
+
 /*  ----------------- Wine Edit Form Styling ----------- */
 
 fieldset {
