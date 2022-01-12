@@ -10,7 +10,7 @@ const wineSchema = new mongoose.Schema({
     varietal: String,
     pricePaid: { type: Number, min:0 },
     rating: { type: Number, min: 0, max: 100 },
-    liked: Boolean,
+    liked: {type: Boolean, default: false },
     tastingNotes: String,
     wineImg: String,
     memory: [
