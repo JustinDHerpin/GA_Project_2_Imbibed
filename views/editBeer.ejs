@@ -1,0 +1,62 @@
+<h1>Your editBeer Route is Rendering</h1>
+
+<h3> <%= item.name %></h3>
+
+<div class="container">
+
+    <h1>Beer Editor</h1>
+
+    <form action="/beers">
+        <input type="submit" value="Return to Beer List Home">
+    </form>
+
+    <form action="/beers/<%= item.id %>?_method=PUT" method='POST'>
+       <fieldset>
+           <legend>Beer Editor</legend>
+
+           <label for="name">Name</label>
+           <input type="text" name="name" id="name" value="<%= item.name %>">
+   
+           <label for="brewery">Brewery</label>
+           <input type="text" name="brewery" id="brewery" value="<%= item.brewery %>">
+   
+           <label for="countryStateCity">City/State/Country of Origin</label>
+           <input type="text" name="countryStateCity" id="countryStateCity" value="<%= item.countryStateCity %>">
+   
+           <label for="type">Type</label> 
+           <input type="text" name="type" id="type" value="<%= item.type %>">
+   
+           <label for="abv">ABV%</label>
+           <input type="text" name="abv" id="abv" value="<%= item.abv %>">
+   
+           <label for="flavor">Flavor</label>
+           <input flavor="text" name="flavor" id="flavor" value="<%= item.flavor %>">
+   
+           <label for="aroma">Aroma</label>
+           <input aroma="text" name="aroma" id="aroma" value="<%= item.aroma %>">
+   
+           <label for="appearance">Appearance</label>
+           <input type="text" name="appearance" id="appearance" placeholder="ex: Dark, Cloudy, Sediment, Red, etc." value="<%= item.appearance %>">
+   
+           <label for="pricePaid">Price</label>
+           <input type="number" name="pricePaid" id="pricePaid" value="<%= item.pricePaid %>">
+   
+           <label for="rating">Rating</label>
+           <input type="number" name="rating" id="rating" placeholder="Your Rating ex: 85" value="<%= item.rating %>">
+   
+           <label for="liked">Liked</label>
+            <input type="checkbox" name="liked" id="liked" <% if(item.liked===true){%> checked <% } %>>
+   
+           <label for="tastingNotes">Tasting Notes</label>
+           <input type="text" name="tastingNotes" id="tastingNotes" placeholder="ex: Bitter, Gramma loved it, etc." value="<%= item.tastingNotes %>">
+   
+           <label for="beerImg">Image Link</label>
+           <input type="text" name="beerImg" id="beerImg" placeholder="ex: https://www.totalwine.com/dynamic/..." value="<%= item.beerImg %>">
+
+            <input class="wine_submit_btn" type="submit" value="Save Changes">
+
+        </fieldset>  
+    </form>
+
+
+</div>

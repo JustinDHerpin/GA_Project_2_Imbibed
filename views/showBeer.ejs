@@ -1,0 +1,42 @@
+<h1>Your Show Beer Route is Rendering</h1>
+
+<div class="wine_show_name">
+    <h1> <%= item.name %> </h1>
+</div>
+
+<div class="wine_show_container">
+    <div class="wine_show_main">
+        <div class="wine_show_img">
+            <img src="<%= item.beerImg %>" alt="<%= item.name %>" width="400" height="400">
+        </div>
+
+        <div class="wine_show_rest">
+            <h4> Name: <%= item.name %> </h2>
+            <h4> Brewerey: <%= item.brewery %> </h4>
+            <h4> Location: <%= item.countryStateCity %> </h4>
+            <h4> Type: <%= item.type %> </h4>
+            <h4> ABV: <%= item.abv %>% </h4>
+            <h4> Flavor: <%= item.flavor %> </h4>
+            <h4> Aroma: <%= item.aroma %> </h4>
+            <h4> Appearance: <%= item.appearance %> </h4>
+            <h4> Price: <%= item.pricePaid %> </h4>
+            <h4> My Rating: <%= item.rating %> </h4>
+            <h4> Liked: <%= item.liked %> </h4>
+            <h4> Tasting Notes: <%= item.tastingNotes %> </h4>
+        </div>
+
+    </div>
+
+    <div class="wine_show_btns">
+
+        <form action="/beers/<%= item.id %>/edit">
+            <input type="submit" value="Edit This Beer">
+        </form>
+
+        <form action="/beers/<%= item.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete This Beer">
+        </form>
+
+    </div>
+
+</div>

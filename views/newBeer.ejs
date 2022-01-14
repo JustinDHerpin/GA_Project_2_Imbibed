@@ -1,0 +1,59 @@
+<h1>Your newBeer Route is Rendering</h1>
+
+<h1>New route working</h1>
+
+<div class="container">
+
+    <h1>Add a New Beer</h1>
+
+    <form action="/beers">
+        <input type="submit" value="Return to Beer List Home">
+    </form>
+
+    <form action="/beers" method='POST'>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name">
+
+        <label for="brewery">Brewery</label>
+        <input type="text" name="brewery" id="brewery" placeholder="Abita, Ballast Point, Anheiser Busch, etc.">
+
+        <label for="countryStateCity">City/State/Country of Origin</label>
+        <input type="text" name="countryStateCity" id="countryStateCity" placeholder="ex: Abita Springs, LA, Italy, Washington, etc.">
+
+        <label for="type">Type</label> 
+        <input type="text" name="type" id="type" placeholder="ex: Lager, Stout, Porter, IPA, etc.">
+
+        <label for="abv">ABV%</label>
+        <input type="text" name="abv" id="abv" placeholder="ex: 6.5, 5.2, 13, etc..">
+
+        <label for="flavor">Flavor</label>
+        <input flavor="text" name="flavor" id="flavor" placeholder="ex: Chocolatey, Hoppy, Bitter, Strong, etc.">
+
+        <label for="aroma">Aroma</label>
+        <input aroma="text" name="aroma" id="aroma" placeholder="ex: Citrus, alcohol, floral, etc.">
+
+        <label for="appearance">Appearance</label>
+        <input type="text" name="appearance" id="appearance" placeholder="ex: Dark, Cloudy, Sediment, Red, etc.">
+
+        <label for="pricePaid">Price</label>
+        <input type="number" name="pricePaid" id="pricePaid" placeholder="ex: 75, 15, etc.">
+
+        <label for="rating">Rating</label>
+        <input type="number" name="rating" id="rating" placeholder="Your Rating ex: 85">
+
+        <label for="liked">Liked</label>
+        <input type="checkbox" name="liked" id="liked" value="true">
+
+        <label for="tastingNotes">Tasting Notes</label>
+        <input type="text" name="tastingNotes" id="tastingNotes" placeholder="ex: Bitter, Gramma loved it, etc.">
+
+        <label for="beerImg">Image Link</label>
+        <input type="text" name="beerImg" id="beerImg" placeholder="ex: https://www.totalwine.com/dynamic/...">
+
+        <input type="submit" value="Add This Beer">
+        
+    </form>
+
+
+</div>

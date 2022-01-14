@@ -6,10 +6,15 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const db = mongoose.connection
 const wineController = require('./controllers/wineController')
+const beerController = require('./controllers/beerController')
 
 const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
 const Wine = require('./models/wineSchema')
 const wineSeed = require('./models/wineSeed.js')
+
+const Beer = require('./models/beerSchema')
+// const beerSeed = require('./models/beerSeed.js')
+
 
 app.use(express.static('./public'))
 app.use(methodOverride('_method'))
@@ -39,6 +44,7 @@ mongoose.connect(mongoURI, {
     db.on('disconnected', () => console.log('mongo disconnected'))
 
 app.use('/wines', wineController)
+app.use('/beers', beerController)
 
 // HOME Route:
 
