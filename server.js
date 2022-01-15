@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const db = mongoose.connection
 const wineController = require('./controllers/wineController')
 const beerController = require('./controllers/beerController')
+const sessionsController = require('./controllers/sessionsController')
 
 const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
 const Wine = require('./models/wineSchema')
@@ -45,6 +46,7 @@ mongoose.connect(mongoURI, {
 
 app.use('/wines', wineController)
 app.use('/beers', beerController)
+app.use('/session', sessionsController)
 
 // HOME Route:
 
