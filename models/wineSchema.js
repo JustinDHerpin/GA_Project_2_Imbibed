@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('../db/connection')
 
 const wineSchema = new mongoose.Schema({
     name: { type: String, required: true },

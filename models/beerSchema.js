@@ -1,11 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require('../db/connection')
 
 const beerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     brewery: String,
     type: String,
     countryStateCity: String,
-    abv: String,
+    abv: Number,
     aroma: String,
     appearance: String,
     flavor: String,

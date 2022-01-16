@@ -25,7 +25,7 @@
         <input type="text" name="type" id="type" placeholder="ex: Lager, Stout, Porter, IPA, etc.">
 
         <label for="abv">ABV%</label>
-        <input type="text" name="abv" id="abv" placeholder="ex: 6.5, 5.2, 13, etc..">
+        <input type="number" name="abv" id="abv" placeholder="ex: 6.5, 5.2, 13, etc.." step="0.01" min="0" max="100">
 
         <label for="flavor">Flavor</label>
         <input flavor="text" name="flavor" id="flavor" placeholder="ex: Chocolatey, Hoppy, Bitter, Strong, etc.">
@@ -40,7 +40,7 @@
         <input type="number" name="pricePaid" id="pricePaid" placeholder="ex: 75, 15, etc.">
 
         <label for="rating">Rating</label>
-        <input type="number" name="rating" id="rating" placeholder="Your Rating ex: 85">
+        <input type="number" name="rating" id="rating" placeholder="Your Rating ex: 85" min="0" max="100">
 
         <label for="liked">Liked</label>
         <input type="checkbox" name="liked" id="liked" value="true">

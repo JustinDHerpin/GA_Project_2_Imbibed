@@ -35,4 +35,27 @@ router.post('/register', async (req, res, next) => {
         next(err)
     }
 })
+
+router.get('/login', (req, res) => {
+    res.render('sessions/login.ejs')
+})
+
+router.post('/login', async (req, res, next) => {
+    try {
+        const userToLogin = await User.findOne({ username: req.body.username })
+        if (userToLogin) {
+            const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (validPassword) {
+                res.send('User is logged in')
+            } else {
+                res.redirect('/session/login')
+            }
+        } else {
+            res.redirect('/session/login')
+        }
+    } catch (err) {
+        next(err)
+    }
+})
+
 module.exports = router
