@@ -29,10 +29,12 @@ app.use(express.json())
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
 
-// Session Middleware
-// app.use(session({
-//     secret: 
-// }))
+//  Session Middleware
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+}))
 
 
 
