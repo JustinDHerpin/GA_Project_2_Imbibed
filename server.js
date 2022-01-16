@@ -21,6 +21,7 @@ const Beer = require('./models/beerSchema')
 // const beerSeed = require('./models/beerSeed.js')
 
 
+
 app.use(express.static('./public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))

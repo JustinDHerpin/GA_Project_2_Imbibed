@@ -20,10 +20,20 @@ router.post('/register', async (req, res, next) => {
             if (userExists) {
                 res.send('Username already taken')
             } else {
+                //console.log('got to log 1')
                 const salt = bcrypt.genSaltSync(10)
+                //console.log('got to log 2')
                 const hashedPassword = bcrypt.hashSync(req.body.password, salt)
+                //console.log('got to log 3')
                 req.body.password = hashedPassword
+                //console.log('got to log 4')
+                //console.log(req.body)
+                //console.log('got to log 5')
+                //console.log('console logging req.body: ' + req.body)
                 const createdUser = await User.create(req.body)
+                //console.log('got to log 6')
+                //console.log("/register createdUser: " + createdUser)
+                //res.send('check your terminal')
                 req.session.username = createdUser.username
                 res.redirect('/')
             }
@@ -47,11 +57,14 @@ router.post('/login', async (req, res, next) => {
             const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (validPassword) {
                 req.session.username = userToLogin.username
+                // console.log('if statement from password validation /login post route')
                 res.redirect('/')
             } else {
+                console.log('else statement firing from /login post route')
                 res.redirect('/session/login')
             }
         } else {
+            console.log('user not found')
             res.redirect('/session/login')
         }
     } catch (err) {
