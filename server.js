@@ -59,13 +59,32 @@ app.use(session({
 
 app.use((req, res, next) => {
     res.locals.username = req.session.username
+    res.locals.loggedIn = req.session.loggedIn
     next()
 })
 
-// Middleware setting up controllers:
+// Middleware for flash messaging
 
-app.use('/wines', wineController)
-app.use('/beers', beerController)
+app.use((req, res, next) => {
+    res.locals.message = req.session.message
+    req.session.message = ""
+    next()
+})
+
+// Authentication middleware
+
+const authRequired = (req, res, next) => {
+    if (req.session.loggedIn) {
+        next()
+    } else {
+        res.redirect('session/login')
+    }
+}
+
+// Setting up controllers:
+
+app.use('/wines', authRequired, wineController)
+app.use('/beers', authRequired, beerController)
 app.use('/session', sessionsController)
 
 // HOME Route:

@@ -1,6 +1,7 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
+const { redirect } = require('express/lib/response')
 
 const router = express.Router()
 
@@ -18,7 +19,8 @@ router.post('/register', async (req, res, next) => {
             const desiredUsername = req.body.username
             const userExists = await User.findOne({ username: desiredUsername })
             if (userExists) {
-                res.send('Username already taken')
+                req.session.message = 'Username already taken, please try again.'
+                res.redirect('/session/register')
             } else {
                 //console.log('got to log 1')
                 const salt = bcrypt.genSaltSync(10)
@@ -35,11 +37,12 @@ router.post('/register', async (req, res, next) => {
                 //console.log("/register createdUser: " + createdUser)
                 //res.send('check your terminal')
                 req.session.username = createdUser.username
+                req.session.loggedIn = true
                 res.redirect('/')
             }
         } else {
-            console.log(req.body)
-            res.send('Passwords must match!')
+            req.session.message = 'Passwords must match'
+            res.redirect('/session/register')
         }
     } catch (err) {
         next(err)
@@ -57,19 +60,25 @@ router.post('/login', async (req, res, next) => {
             const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (validPassword) {
                 req.session.username = userToLogin.username
+                req.session.loggedIn = true
                 // console.log('if statement from password validation /login post route')
                 res.redirect('/')
             } else {
-                console.log('else statement firing from /login post route')
+                req.session.message = "Invalid username or password"
+                //console.log('else statement firing from /login post route')
                 res.redirect('/session/login')
             }
         } else {
-            console.log('user not found')
             res.redirect('/session/login')
         }
     } catch (err) {
         next(err)
     }
+})
+
+router.get('/logout', (req, res) => {
+    req.session.destroy()
+    res.redirect('/session/login')
 })
 
 module.exports = router

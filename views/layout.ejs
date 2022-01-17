@@ -21,8 +21,12 @@
             <li class="nav"><a href='/wines' class="aTagButton">Wines Home</a></li>
             <li class="nav"><a href='/beers' class="aTagButton">Beers Home</a></li>
             <li class="nav"><a href='#' class="aTagButton">Future</a></li>
-            <li class="nav"><a href='/session/register' class="aTagButton">Register</a></li>
-            <li class="nav"><a href='/session/login' class="aTagButton">Log In</a></li>
+            <% if (!loggedIn) { %>
+                <li class="nav"><a href='/session/register' class="aTagButton">Register</a></li>
+                <li class="nav"><a href='/session/login' class="aTagButton">Log In</a></li>
+            <% } else { %>
+                <li class="nav"><a href='/session/logout' class="aTagButton">Log Out</a></li>
+            <% } %>
             
 
         </ul>
@@ -33,6 +37,9 @@
     
 
     <main>
+        <% if (message) { %>
+            <p class="flash_message"> <%= message %> </p>
+        <% } %>
         
         <%- body %> 
 
