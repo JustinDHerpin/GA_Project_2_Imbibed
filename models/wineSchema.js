@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection')
+const User = require('./user')
 
 const wineSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -21,6 +22,10 @@ const wineSchema = new mongoose.Schema({
         memImg: String
         }
     ],
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
     }, { timestamps: true })
     
 

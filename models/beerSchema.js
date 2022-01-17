@@ -22,6 +22,10 @@ const beerSchema = new mongoose.Schema({
         memImg: String
         }
     ],
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
     }, { timestamps: true })
     
 
