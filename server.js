@@ -2,7 +2,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 // const PORT = 4080
-const PORT = process.env.PORT
+//const PORT = process.env.PORT
+app.set('port', process.env.PORT || 4080)
 const SESSION_SECRET = process.env.SESSION_SECRET
 const expressEjsLayout = require('express-ejs-layouts')
 const methodOverride = require('method-override')
@@ -109,6 +110,6 @@ app.get('/', (req, res) => {
 
 // --------------------------------------------------------------------
 
-app.listen(PORT, () => {
-    console.log(`Drink Up! on PORT: ${PORT}`)
+app.listen(app.get('port'), () => {
+    console.log(`Drink Up! on PORT: ${app.get('port')}`)
 })

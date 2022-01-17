@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const db = mongoose.connection
 
 //const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
-const MONGODB_URI = process.env.MONGODB_URI
+//const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : 'mongodb://127.0.0.1:27017/imbibed'
 
 //mongoose.connect(mongoURI, {
 mongoose.connect(MONGODB_URI, {
