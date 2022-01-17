@@ -16,7 +16,10 @@ router.get('/new', (req, res) => {
 
 router.get('/', (req, res) => {
     Wine.find({}, (err, items) => {
-        res.render('indexWines', {items})
+        res.render('indexWines', {
+            items,
+            //username: req.session.username
+        })
         console.log(items)
     })
 //     res.render('indexWines')

@@ -21,9 +21,12 @@
             <li class="nav"><a href='/wines' class="aTagButton">Wines Home</a></li>
             <li class="nav"><a href='/beers' class="aTagButton">Beers Home</a></li>
             <li class="nav"><a href='#' class="aTagButton">Future</a></li>
+            
 
         </ul>
-
+        <% if (username) { %>
+            <p class="nav" id="nav_username">Welcome <%= username %></p>
+        <% } %>
     </nav>
     
 

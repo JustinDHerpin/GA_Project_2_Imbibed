@@ -55,6 +55,15 @@ app.use(session({
 //     db.on('connected', () => console.log('mongo connected: ', mongoURI))
 //     db.on('disconnected', () => console.log('mongo disconnected'))
 
+// Custom Middleware for session user availability to all routes:
+
+app.use((req, res, next) => {
+    res.locals.username = req.session.username
+    next()
+})
+
+// Middleware setting up controllers:
+
 app.use('/wines', wineController)
 app.use('/beers', beerController)
 app.use('/session', sessionsController)
