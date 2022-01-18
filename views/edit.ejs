@@ -1,5 +1,3 @@
-<h1>Edit Route is Working</h1>
-
 <h3> <%= item.name %></h3>
 
 <div class="container">
@@ -43,7 +41,6 @@
 
             <label for="liked">Liked</label>
             <input type="checkbox" name="liked" id="liked" <% if(item.liked===true){%> checked <% } %>>
-            <!-- copy above line down to make multiple checkboxes and add logic -->
 
             <label for="tastingNotes">Tasting Notes</label>
             <input type="text" name="tastingNotes" id="tastingNotes" value="<%= item.tastingNotes %>">

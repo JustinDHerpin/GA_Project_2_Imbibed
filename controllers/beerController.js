@@ -18,9 +18,7 @@ router.get('/', (req, res) => {
     
     Beer.find({}, (err, items) => {
         res.render('indexBeers', {items})
-        console.log(items)
     })
-//    res.render('indexBeers') 
 })
 
 // SHOW showBeer route:

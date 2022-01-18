@@ -19,11 +19,8 @@ router.get('/', (req, res) => {
     Wine.find({ owner: req.session.userId }, (err, items) => {
         res.render('indexWines', {
             items,
-            //username: req.session.username
         })
-        console.log(items)
     })
-//     res.render('indexWines')
 })
 
 // SHOW route:
@@ -63,22 +60,15 @@ router.put('/:id', (req, res) => {
 
 router.post('/', async (req, res) => {
     const owner = await User.findById(req.session.userId)
-    //console.log(owner)
+
     const newWine = ({
-        name: req.body.name,
+        ...req.body,
         owner: owner
     })
+
     const createWine = await Wine.create(newWine)
-    //console.log(createWine)
-    res.redirect('/wines')
-    // Wine.create(req.body, (error, item) => {
-    //     if (error) {
-    //         console.log(error)
-    //     } else {
-    //         res.redirect('/wines')
-    //     }
-        
-    // })
+
+    if (createWine) res.redirect('/wines')
 })
 
 // DELETE Route:

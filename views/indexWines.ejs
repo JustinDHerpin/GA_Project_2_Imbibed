@@ -1,9 +1,9 @@
 <div class="indexWines">
-    <!-- <% if (username) { %>
-        <p>Welcome, <%= username %></p>
-    <% } %> -->
-
-    <h1>My Wine List:</h1>
+    <% if (username) { %>
+        <h1><%= username %>'s Wine List:</h1>
+    <% } else {%>
+        <h1>Wine List:</h1>
+    <% } %>
 
     <form action="/wines/new">
         <input type="submit" value="Creat a New Wine">

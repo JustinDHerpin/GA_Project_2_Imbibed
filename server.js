@@ -1,25 +1,19 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-// const PORT = 4080
-//const PORT = process.env.PORT
 app.set('port', process.env.PORT || 4080)
 const SESSION_SECRET = process.env.SESSION_SECRET
 const expressEjsLayout = require('express-ejs-layouts')
 const methodOverride = require('method-override')
 const session = require('express-session')
-// const mongoose = require('mongoose')
-// const db = mongoose.connection
 const wineController = require('./controllers/wineController')
 const beerController = require('./controllers/beerController')
 const sessionsController = require('./controllers/sessionsController')
 
-// const mongoURI = 'mongodb://127.0.0.1:27017/imbibed'
 const Wine = require('./models/wineSchema')
 const wineSeed = require('./models/wineSeed.js')
 
 const Beer = require('./models/beerSchema')
-// const beerSeed = require('./models/beerSeed.js')
 
 
 
@@ -39,22 +33,6 @@ app.use(session({
 }))
 
 
-
-// mongoose.connect(mongoURI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     }).then(
-//     () => {
-//         console.log('The connection with mongod is established')
-//     }).catch((error) => {
-//         console.log(error)
-//     })
-
-
-
-//     db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
-//     db.on('connected', () => console.log('mongo connected: ', mongoURI))
-//     db.on('disconnected', () => console.log('mongo disconnected'))
 
 // Custom Middleware for session user availability to all routes:
 

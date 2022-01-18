@@ -5,13 +5,16 @@ const { redirect } = require('express/lib/response')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('session controller works')
-})
+
+// Routes:
+
+// GET Route for Register Page
 
 router.get('/register', (req, res) => {
     res.render('sessions/register.ejs')
 })
+
+// POST Route to Register New User
 
 router.post('/register', async (req, res, next) => {
     try {
@@ -22,20 +25,10 @@ router.post('/register', async (req, res, next) => {
                 req.session.message = 'Username already taken, please try again.'
                 res.redirect('/session/register')
             } else {
-                //console.log('got to log 1')
                 const salt = bcrypt.genSaltSync(10)
-                //console.log('got to log 2')
                 const hashedPassword = bcrypt.hashSync(req.body.password, salt)
-                //console.log('got to log 3')
                 req.body.password = hashedPassword
-                //console.log('got to log 4')
-                //console.log(req.body)
-                //console.log('got to log 5')
-                //console.log('console logging req.body: ' + req.body)
                 const createdUser = await User.create(req.body)
-                //console.log('got to log 6')
-                //console.log("/register createdUser: " + createdUser)
-                //res.send('check your terminal')
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
                 req.session.userId = createdUser._id
@@ -50,9 +43,13 @@ router.post('/register', async (req, res, next) => {
     }
 })
 
+// GET Route for Login Page
+
 router.get('/login', (req, res) => {
     res.render('sessions/login.ejs')
 })
+
+// POST Route for Logging in User
 
 router.post('/login', async (req, res, next) => {
     try {
@@ -63,11 +60,9 @@ router.post('/login', async (req, res, next) => {
                 req.session.username = userToLogin.username
                 req.session.loggedIn = true
                 req.session.userId = userToLogin._id
-                // console.log('if statement from password validation /login post route')
                 res.redirect('/')
             } else {
                 req.session.message = "Invalid username or password"
-                //console.log('else statement firing from /login post route')
                 res.redirect('/session/login')
             }
         } else {
@@ -77,6 +72,8 @@ router.post('/login', async (req, res, next) => {
         next(err)
     }
 })
+
+// GET Route to Destroy User Session and Return User to Login Page
 
 router.get('/logout', (req, res) => {
     req.session.destroy()
