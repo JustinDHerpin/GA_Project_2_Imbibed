@@ -117,10 +117,17 @@ footer {
     margin: 100px 0 100px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     /* background-image: url('https://cdn.pixabay.com/photo/2020/02/02/15/07/wine-4813260_1280.jpg');
     background-size: contain;
     background-repeat: no-repeat; */
+} 
+
+.db-buttons-div > div {
+    margin-left: 15px;
 }
+
+
 
 .disclaimer {
     text-align: center;
