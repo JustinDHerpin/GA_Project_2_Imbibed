@@ -32,23 +32,23 @@ A simple app to track the wine and drinks you've tried and want to remember.  Ne
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://bestanimations.com/gifs/merry-christmas-tree-gif.html">
-    <img src="https://bestanimations.com/uploads/gifs/1478392951whitehouse-2020-merry-christmas-tree-animated-gif.gif#.YZjJp2Umwak.link" alt="MerryChristmas" width="180" height="150">
+  <a href="https://bestanimations.com/gifs/Beer.html">
+    <img src="https://bestanimations.com/media/alcohol/1004767983beer-animated-gif.gif#.YecYpJFVSGw.link" alt="Beer" width="180" height="150">
   </a>
 
-  <h3 align="center">Justin Herpin's Towers of Hanoi</h3>
+  <h3 align="center">Justin Herpin's Imbibed App</h3>
 
   <p align="center">
-    GA seirFlex-928 Project #1
+    GA seirFlex-928 Project #2
     <br />
-    <a href="https://justindherpin.github.io/Project_1_Tower-of-Hanoi/OG/index.html"><strong>Play Towers of Hanoi Now</strong></a>
+    <a href="https://imbibed.herokuapp.com/"><strong>Try Imbibed Now</strong></a>
     <br />
     <br />
     <a href="https://www.linkedin.com/in/justin-herpin-ba5a8a217/">My Linked In</a>
     ·
     <a href="https://github.com/JustinDHerpin?tab=repositories">My Personal GitHub Repositories</a>
     ·
-    <a href="https://github.com/JustinDHerpin/Project_1_Tower-of-Hanoi">This Project's Repository</a>
+    <a href="https://github.com/JustinDHerpin/GA_Project_2_Imbibed">This Project's Repository</a>
   </p>
 </div>
 
