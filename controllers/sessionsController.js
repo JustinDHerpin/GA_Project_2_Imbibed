@@ -38,6 +38,7 @@ router.post('/register', async (req, res, next) => {
                 //res.send('check your terminal')
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
+                req.session.userId = createdUser._id
                 res.redirect('/')
             }
         } else {
@@ -61,6 +62,7 @@ router.post('/login', async (req, res, next) => {
             if (validPassword) {
                 req.session.username = userToLogin.username
                 req.session.loggedIn = true
+                req.session.userId = userToLogin._id
                 // console.log('if statement from password validation /login post route')
                 res.redirect('/')
             } else {

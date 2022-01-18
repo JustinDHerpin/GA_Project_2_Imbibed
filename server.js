@@ -67,6 +67,7 @@ app.use((req, res, next) => {
 // Middleware for flash messaging
 
 app.use((req, res, next) => {
+    res.locals.userId = req.session.userId
     res.locals.message = req.session.message
     req.session.message = ""
     next()

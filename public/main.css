@@ -9,10 +9,13 @@
 /* html, main, body { */
 /* html, body { */
 body, main {
+    background-image: url('https://cdn.pixabay.com/photo/2014/08/06/14/27/wood-411643_1280.jpg');
     height: 100%;
+    font-family: Helvetica, Verdana, sans-serif;
 } 
 
 body {
+    /* background-image: url('https://cdn.pixabay.com/photo/2014/08/06/14/27/wood-411643_1280.jpg'); */
     position: relative;
     margin: 0 auto;
     display: flex;
@@ -21,6 +24,7 @@ body {
 }
 
 main {
+    /* background-color: rgba(200, 44, 23, 0.68); */
     min-height: 100vh;
     display: flex;
     flex-direction: column;

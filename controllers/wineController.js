@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Wine = require('../models/wineSchema')
+const User = require('../models/user')
 
 
 // Routes:
@@ -15,7 +16,7 @@ router.get('/new', (req, res) => {
 // WINES HOME Route:
 
 router.get('/', (req, res) => {
-    Wine.find({}, (err, items) => {
+    Wine.find({ owner: req.session.userId }, (err, items) => {
         res.render('indexWines', {
             items,
             //username: req.session.username
@@ -60,15 +61,24 @@ router.put('/:id', (req, res) => {
 
 // POST route:
 
-router.post('/', (req, res) => {
-    Wine.create(req.body, (error, item) => {
-        if (error) {
-            console.log(error)
-        } else {
-            res.redirect('/wines')
-        }
-        
+router.post('/', async (req, res) => {
+    const owner = await User.findById(req.session.userId)
+    //console.log(owner)
+    const newWine = ({
+        name: req.body.name,
+        owner: owner
     })
+    const createWine = await Wine.create(newWine)
+    //console.log(createWine)
+    res.redirect('/wines')
+    // Wine.create(req.body, (error, item) => {
+    //     if (error) {
+    //         console.log(error)
+    //     } else {
+    //         res.redirect('/wines')
+    //     }
+        
+    // })
 })
 
 // DELETE Route:
