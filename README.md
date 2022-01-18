@@ -57,30 +57,41 @@ A simple app to track the wine and drinks you've tried and want to remember.  Ne
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This game is my take on the classic game of Tower of Hanoi.  This famous game evolved from a French methematician in 1883.
+My family loves to drink, as do so many of us.  Particularly, my family loves wine.  I am always struggling to remember who likes what wine, which ones were the favorites, which wine to bring, and even just when I want something different from my go to's but don't want to "risk it" by buying a different wine that i can't remember if I liked or not.  I created this application as a personal database for tracking those wines that we try over the years that we want to remember if it was particularly good or if it was...terrible. 
 
-![StartScreen](TowerofHanoi_Start.png "Start Screen")
+With the expansion of the craft beer industry, the popularity of "beers around the world", and, for lack of better phrasing, "beer snobs", I have also included functionality to log/create a database for those of us who also want to keep track of different beers that we try.  I know you can get wine and beer ratings from other websites, but reviews are often based on professional palettes and information that the general consumer may not be interested in. Also, what one person or "expert" likes, another may not.  
+
+So...with that being said, I created this version to specifically track YOUR wines and YOUR beers with YOUR ratings, for the lay person among us, along with most of the options to include additional information about the beverages that would be important to those with the aformentioned developed palettes.  This way you can rate the drinks personally, tailored to the only person's opinion that matter...YOU...oh yeah, and also those of your loved ones and friends.  
 
 
-The user must move each disc, one by one, stacking only ontop of larger discs or empty blocks until the Target block mirrors the Starting Block.
+## Initial Concept and Wireframes:
 
-![MovingDiscs](TowerofHanoi_Moving.png "Moving Discs")
+![Wireframe #1](Project_2_Wireframe_1.png "imbibed wireframe #1")
 
-Once the discs have all been moved, the round is over (and the next round should begin for future editions).
+![Wireframe #2](Project_2_Wireframe_2.png "imbibed wireframe #2")
 
-![WinSolution](TowerofHanoi_Win.png "Win Solution")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### Technologies Utilized:
+### Technologies and Other Packages Utilized:
 
 
-* HTML
-* CSS
+* [HTML](https://html.com/)
+* [CSS](https://www.w3schools.com/w3css/defaulT.asp)
 * [JavaScript](https://www.javascript.com/)
-* [JQuery](https://jquery.com)
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
+* [EJS](https://ejs.co/)
+* [express-ejs-layouts](https://www.npmjs.com/package/express-ejs-layouts)
+* [MongoDB](https://www.mongodb.com/) - Used in Development
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_content=1217adtest_pmcopy_control&utm_source=google&utm_campaign=gs_americas_united_states_search_core_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624338&adgroup=115749704063&gclid=CjwKCAiA55mPBhBOEiwANmzoQg3l7zg3gvFhAbD53-XikqCKuC8UBjfNuS5EMa_X4aqD3caTtMiBmBoCUywQAvD_BwE) - Used in Deployment
+* [Mongoose](https://mongoosejs.com/)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
+* [method-override](https://www.npmjs.com/package/method-override)
+* [express-session](https://www.npmjs.com/package/express-session)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
 
 
@@ -88,25 +99,29 @@ Once the discs have all been moved, the round is over (and the next round should
 ### Frequented References:
 
 
+* All Links Above Plus:
 * [W3Schools](https://www.w3schools.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
 * [Google](https://www.google.com/)
 * [YouTube](https://www.youtube.com/)
 * [Pixabay - royalty free pictures](https://pixabay.com/)
-* [Jquery Documentation](https://api.jquery.com/click/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## How To Play
+## How To Download Git Hub Repository and Setup Locally:
 
-* All you need is an internet connection and capable device
+* [Click here or above to visit this project's repository](https://github.com/JustinDHerpin/GA_Project_2_Imbibed)
+* Make a new directory in your terminal to clone the files into - i.e. "mkdir imbibed" - or decide where you want the files to be installed.
+* CD into your new directory or chosen folder - i.e. "cd imbibed"
+* Once you are in your new directory, [Click here to visit this project's repository](https://github.com/JustinDHerpin/GA_Project_2_Imbibed) and click on the 'fork' button at the top-right of the page.
+* Once you are redirected to your forked copy, copy the URL and paste it into your terminal where you are already in the directory created or chosen in the previous steps.  The syntax should be: "git clone https://www.yourforkedcopy.com", and press enter to clone the files into your directory.
+* Once the process is completed, use code . to open with VSCode, or open with your chosen editor and run npm init and npm install to install all dependencies for this project.
+* Once the process is completed, to run the project locally, open up a new browser window and navigate to the site "localhost:4080/", which will take you to the homepage.
 
-* No installation required
-
-* [Click Here to Play](https://justindherpin.github.io/Project_1_Tower-of-Hanoi/OG/index.html)
+* Or, if developing isn't your thing and you just want to check it out,you can [Click Here](https://imbibed.herokuapp.com/) to open the public version available from heroku.com.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -114,53 +129,44 @@ Once the discs have all been moved, the round is over (and the next round should
 <!-- LICENSE -->
 ## User Stories and Stretch Goals
 
-MVP Goals (3-5 days):
-* As a player, I would like to have an attractive UI board displaying all elements of the game
-* As a player, I would like to be able to learn the rules of the game.
-* As a player, I would like to be able to start the game
-* As a player, I would like to be acknowledged that my clicks have selected the correct disc
-* As a player, I would like to be able to select a new position for the selected disc, and if it's a legal move, be able to see the disc disappear from current location and appear in the new location I selected.
-* As a player, I would like to be notified if a move is illegal or not allowed.
-* As a player, I would like to be notified when a game is won and have option to reset the game to play again.
+MVP Goals:
+* As a user, I would like to see a list of all the different wines/beers/beverages I've tried over time.
+* As a user, I would like the ability to click on an entry and be presented with data about the wine(s) written in my own words.
+* As a user, I would like the ability to easily add a wine to the list.
+* As a user, I would like the ability remove a wine from the list.
+* As a user, I would like the ability to edit or update the information to each entry as my tastes change or as I have new/different experiences.
 
-Stretch Goals:
+Stretch Goals Accomplished:
 
-Bronze: (3 days)
+* As a user, I would like to be able to store/track the beers I've tried over time in a seperate database from that of the wines, to be displayed on a seperate page.
+* As a user, I would like the ability to attach a photo of the wine/beer for reference.
+* As a user, I would like to be able to create a profile and log in and/or logout.
+* As a user, I would like to be able to keep my wine list seperate from those of my significant other, friends or other family memebers.
+* As a developer, I would like my website to incorporate some basic styling other than just what HTML renders for the user.
 
-* As a player, I would like to have the option to move on to a new, harder level after I complete the current level.
-* As a player, I would like to know the minimum amount of moves to accomplish a win
-* As a player, I would like to keep track of my current number of moves
-* As a player, I would like to keep track of my score and highest # of discs for my session
-* As a player, I would like to be able to add some information for personalization, such as my name.
+Additional Stretch Goals and Features in Development as of Initial Deployment:
 
-Silver: (3 days)
-
-* As a player, I would like to have more options for game variation (maybe changing the number of poles, or selecting a specific number of discs to play with rather than just playing in order each time. maybe a "speed round" that is timed, etc.)
-* As a player, I would like to have click/drag/drop functionality
-* As a player, I would like to compete with another person (maybe a speed round challenge version to play with friends)
-
-Gold: (any available time)
-
-* As a player, I would like to see an animation of the solution
-* As a player, I would like to replace the discs with other items to stack (perhaps) such as maybe surfboards or cake layers or graphical representation of a disc or Pyramid layer rather than just a colored div.
-* As a player, I would like to see animations for a start condition when the game is started arranging the discs in place
-* As a player, I would like to see animations for win condition
-* As a player, I would like to be able to play against other players online and track wins/losses/high scores/etc.
-
-## My Original Wireframe
+* As a developer, I would like to revisit my CSS and upgrade/update website styling to a professional, portfolio-worthy level.
+* As a developer, I would like to make the css and styling responsive to different viewing environments.
+* As a user, I would like the feature added to the beer database to also make it unique to each user, as the wine database is.
+*As a user, I would like a fourth model for cocktails/mixed drinks, and for this 4th model to leverage a 3rd party API to query for cocktail recipes by name, drink type, alcohol used, ingredients, taste, etc.
+* As a user, I would like the ability to display additional information about the beverages unique to me, as in a "memory section", where I can upload personal picture from an event tying the wine to personal memory of an event, time, place, people, etc.  This functionality would be to create almost a memory-book aspect further personalizing user experience with the app.
+* As a user, I would like to be able to search/filter results from my databases to find wines by specific features or attributes.
+* As a user, I would like the ability to link to online sources to view current pricing and availability of each item.
+* As a user, I would like the ability to import information from a trusted source to view professional reviews of each item.
 
 
-![StartScreen](GA_Project_1_WireFrame.png "Start Screen")
+## Biggest Challenges and Unresolved Problems/Issues:
 
+* CSS - It was a big time suck for me when I fist began adding in css.  I wanted to do it from scratch for practice rather than using Bootstrap/similar, but it was difficult for me to re-wrap my head around styling with the ejs format in the beginning and I ended up scrapping my first attempts at more advanced CSS and after wasting half a day with this issue, I ended up just going with some basic styling that I could modify later and moved on to adding in some functionality stretch goals
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+* Sessions - Initial setup with sessions definitely gave me some issues to resolve around re-structuring some of my existing files to work with our sessions lessons, such as adding in a db folder and moving connections into that and also implementing dotenv and also trying to figure out how to attach ownership of database entries to specific users once sessions was established.
 
+## What I Learned and Takeaways:
 
-
-
-## Biggest Challenges and Blocks
-
-By far, my biggest challenge in this project came when trying to fix a bug when I reached the 90% done mark.  I spent almost 3 days coding and re-coding and re-factoring after making adjustments to the game trying to fix a bug that was random and only fired very randomly and infrequently.  I broke and rebuilt the game over and over during this period.  Had Paresh and Billie both help.  Luckily, Paresh helped restore me to the earlier 90%-ish version, only to realize later in desperation that when merging, we had accepted some changes from the earlier, broken versions, and my game was nearly gone again.  I wanted to quit General Assembly. I spend another 1.5 hours rebuilding my game, and when I was just about finished and testing it, I realized a pattern to the bug, traced it down and fixed it (which actually took me adding 3 more variables and adding code pieces in 4 different locations and fixed another bug in the process).  
+* Biggest thing I think as far as node and express goes was gaining a lot more familiarity with models, views, controllers, routes, syntax, middleware and it's many roles, abilities and functionality.
+* Finally getting back in the groove with CSS.  Practice with styling is something I definitely needed and still need more of in the future. 
+* Time Management - as always, things take much longer than initially planned for, which hindered my progress towards the end of the project.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -174,16 +180,16 @@ MyName: Justin D. Herpin
 
 My Email: justindherpin@yahoo.com
 
-Project Link: [https://github.com/JustinDHerpin/Project_1_Tower-of-Hanoi](https://github.com/JustinDHerpin/Project_1_Tower-of-Hanoi)
+Git Hub Project Link: [https://github.com/JustinDHerpin/GA_Project_2_Imbibed](https://github.com/JustinDHerpin/GA_Project_2_Imbibed)
+
+Deployed Project Link: [https://imbibed.herokuapp.com/](https://imbibed.herokuapp.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
 
-Have to give a big shout out to our instructors.  Especially Paresh for working through issues with me/us and for guidance, and Billie for making himself available to help at pretty much anytime and being a javascript wizard.  Thanks Guys.  Sorry Matt - we just weren't in your group.....j/k man you have helped a ton as well.  And lastly, to Garri Kats, without whom this acknowledgement section would possibly not exist.
 
 ## License
 
