@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection')
+const User = require('./user')
 
 const beerSchema = new mongoose.Schema({
     name: { type: String, required: true },

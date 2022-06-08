@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
     Wine.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem) => {
         res.redirect('/wines/' + req.params.id)
         // console.log(err)
-        console.log(updatedItem)
+        //console.log(updatedItem)
         
     })
 })

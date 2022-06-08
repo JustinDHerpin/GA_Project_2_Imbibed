@@ -73,6 +73,18 @@ nav ul li a {
     align-self: center;
 }
 
+/* ------------ Register Form Styling  -----------------------------*/
+
+.register-main-div {
+    background-color: white;
+    margin-top:  100px;
+    padding: 10px;
+    height: 50%;
+    width: 30%;
+}
+
+
+
 /* ------------ Footer Styling  -----------------------------*/
 
 footer {
@@ -86,7 +98,7 @@ footer {
 /* ------------ Index/Home Page Styling  --------------------*/
 
 .index_div {
-    background: whitesmoke;
+    /* background: whitesmoke; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,6 +110,7 @@ footer {
     width: 75%;
     text-align: center;
     align-content: center;
+    /* background-color: rgba(162, 26, 62, 0.79); */
 }
 
 .welcome_div h1 {
