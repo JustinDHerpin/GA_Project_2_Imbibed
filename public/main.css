@@ -12,6 +12,11 @@ body, main {
     font-family: Helvetica, Verdana, sans-serif;
 } 
 
+/* Maybe remove this? */
+html {
+    height: 100%;
+}
+
 body {
     /* background-image: url('https://cdn.pixabay.com/photo/2014/08/06/14/27/wood-411643_1280.jpg'); */
     position: relative;
@@ -33,10 +38,13 @@ main {
 /* --------------------  Nav Bar Styling  ---------------------- */
 
 nav {
+    margin-top: 8px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background: #2660b1;
-    height: 80px;
+    /* background: #2660b1; */
+    background: #ca1e32;
+    min-height: 80px;
 }
 
 label.logo {
@@ -75,13 +83,38 @@ nav ul li a {
 
 /* ------------ Register Form Styling  -----------------------------*/
 
+.register-section {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form-title {
+    
+}
+
 .register-main-div {
-    background-color: white;
+    background-color: #2660b1;
     margin-top:  100px;
     padding: 10px;
     height: 50%;
     width: 30%;
+    border-radius: 4px;
 }
+
+#register-form {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.register-form-input {
+    /* width: calc(100% - 30px); */
+    width: 100%;
+}
+
+/* ------------ LogIn Form Styling  -----------------------------*/
 
 
 
