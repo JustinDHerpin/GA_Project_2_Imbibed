@@ -15,7 +15,9 @@
 
         <label class="logo" >imbibed</label>
 
-        <ul>
+        <button id="hamburger" style="width:40px; height: 40px;border-radius: 4px;"><p>&#9776;</p></button>
+
+        <ul id="nav-ul">
 
             <li class="nav"><a href='/' class="aTagButton">Homepage</a></li>
             <li class="nav"><a href='/wines' class="aTagButton">Wines Home</a></li>
@@ -46,7 +48,23 @@
     </main>
 
     <footer>copyright jherpin2022</footer>
-    
+
+    <script>
+        console.log("hello world!")
+        function hamburgerMenu() {
+            const hamburger = document.getElementById("hamburger");
+            const navUL = document.getElementById("nav-ul");
+
+            hamburger.addEventListener('click', () => {
+                navUL.classList.toggle('show');
+            });
+
+            // console.log(hamburger)
+            // console.log(navUL)
+        }
+        hamburgerMenu()
+        
+    </script>
 </body>
 
 </html>
