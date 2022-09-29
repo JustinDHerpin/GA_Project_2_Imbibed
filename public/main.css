@@ -1,3 +1,14 @@
+
+:root {
+    /* --mainColor: #11303fb9; */
+    /* --mainColor: #11303f; */
+    /* --mainColor: #071d28; */
+    --mainColor: #521b1b;
+    --secondaryColor: #fff;
+    --borderColor: #071d28;
+    
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -56,7 +67,8 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #11303fb9;
+    /* background: #11303fb9; */
+    background: var(--mainColor);
     min-height: 80px;
 }
 
@@ -117,27 +129,43 @@ nav ul li a {
     align-items: center;
 }
 
-.register-form-title {
-    
-}
-
 .register-main-div {
-    background-color: #2660b1;
-    margin-top:  100px;
+    background-color: var(--mainColor);
+    border: 1px solid var(--borderColor);
+    margin-top:  150px;
     padding: 10px;
     height: 50%;
     width: 30%;
     border-radius: 4px;
 }
 
+#register-form-title {
+    text-align: center;
+    color:#fff;
+}
+
+.form-input-label {
+    color: #fff;
+    line-height: 2.7em;
+}
+
 #register-form {
     line-height: 24px;
     font-size: 16px;
+
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 5px;
+    /* background-color: var(--mainColor); */
+    margin-bottom: 50px;
 }
 
 .register-form-input {
     /* width: calc(100% - 30px); */
     width: 100%;
+    color: #fff;
 }
 
 /* ------------ LogIn Form Styling  -----------------------------*/
@@ -157,12 +185,8 @@ footer {
 /* ------------ Index/Home Page Styling  --------------------*/
 
 .index-div {
-    /* background: whitesmoke; */
-    /* background: rgba(172, 158, 158, 0.735); */
     width: 100%;
-    /* min-height: 100vh; */
     margin-top: 50px;
-    /* background: #35637ae3; */
     background: rgba(0, 0, 0, 0.687);
     display: flex;
     flex-direction: column;
@@ -175,10 +199,6 @@ footer {
     width: 75%;
     text-align: center;
     align-content: center;
-    /* background-color: rgba(162, 26, 62, 0.79); */
-    /* background-color: #325e74; */
-    /* background-color: #325e74; */
-    /* background-color: #1e5976; */
 }
 
 .welcome_div h1 {
@@ -198,7 +218,6 @@ footer {
     display: flex;
     align-items: center;
     text-align: center;
-    /* justify-content: space-evenly; */
     justify-content: center;
     column-gap: 50px;
 }
