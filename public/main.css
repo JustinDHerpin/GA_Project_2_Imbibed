@@ -3,7 +3,8 @@
     /* --mainColor: #11303fb9; */
     /* --mainColor: #11303f; */
     /* --mainColor: #071d28; */
-    --mainColor: #521b1b;
+    /* --mainColor: #521b1b; */
+    --mainColor: #280008;
     --secondaryColor: #fff;
     --borderColor: #071d28;
     
@@ -18,10 +19,10 @@
 }
 
 /* Maybe remove this? */
-html {
-    /* height: 100%; */
-    /* width: 100%; */
-}
+/* html {
+    height: 100%;
+    width: 100%;
+} */
 
 body, main {
     /* background-image: url('https://cdn.pixabay.com/photo/2014/08/06/14/27/wood-411643_1280.jpg'); */
@@ -170,7 +171,20 @@ nav ul li a {
 
 /* ------------ LogIn Form Styling  -----------------------------*/
 
+.login-main-div {
+    background-color: var(--mainColor);
+    border: 1px solid var(--borderColor);
+    margin-top: 150px;
+    padding: 10px;
+    height: 50%;
+    width: 30%;
+    border-radius: 4px;
+}
 
+#login-form-title {
+    text-align: center;
+    color: #fff;
+}
 
 /* ------------ Footer Styling  -----------------------------*/
 
